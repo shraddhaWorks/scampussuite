@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // Fixed spelling from "comphonents" to "components"
 import Navbar from "@/comphonents/common/navbar"; 
+import Footer from "@/comphonents/common/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,9 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
+        <Footer />
       </body>
+      
     </html>
   );
 }
