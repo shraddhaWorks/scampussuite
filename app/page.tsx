@@ -5,12 +5,14 @@ import CampusNeeds from "@/comphonents/home/campusNeeds";
 import Clients from "@/comphonents/home/clients";
 import FAQ from "@/comphonents/home/faq";
 import FinalCTA from "@/comphonents/home/finalCTA";
+import HowItWorks from "@/comphonents/home/working";
 
 export default function Home() {
   return (
    <>
    <Hero/>
    <CampusNeeds/>
+   <HowItWorks/>
    <Clients />
    <FAQ />
    <FinalCTA />
