@@ -68,7 +68,7 @@ const CampusNeeds = () => {
 
             {/* Hero Header Section */}
             <section className="py-24 px-6 text-center max-w-4xl mx-auto">
-                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-bold tracking-widest mb-10">
+                <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-ms mb-10">
                     <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
                     Powered by SCAMPUS
                 </div>
@@ -144,8 +144,8 @@ const CampusNeeds = () => {
                                         {pillar.desc}
                                     </p>
 
-                                    <button className="group flex items-center gap-3 bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 px-8 py-4 rounded-full transition-all duration-300">
-                                        <span className="text-orange-500 font-bold text-sm tracking-wide">Learn More</span>
+                                    <button className="group flex items-center gap-3 bg-orange-500/10 hover:bg-orange-500/60 border border-orange-500/40 px-5 py-3 rounded-2xl transition-all duration-300">
+                                        <span className="text-orange-500 font-bold text-sm  ">Learn More</span>
                                         <span className="text-orange-500 transition-transform duration-300 group-hover:translate-x-1.5">→</span>
                                     </button>
                                 </motion.div>

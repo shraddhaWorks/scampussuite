@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* DESKTOP ACTION BUTTON */}
       <div className="hidden md:block">
-        <button className="bg-[#FF6A00] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_5px_15px_rgba(255,106,0,0.2)]">
+        <button className="bg-orange border border-orange-500/40 text-orange-400 hover:bg-orange-500 hover:text-white px-6 py-2.5 rounded-2xl  text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_5px_15px_rgba(255,106,0,0.2)]">
           Get Started
         </button>
       </div>
