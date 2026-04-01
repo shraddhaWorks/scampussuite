@@ -57,9 +57,10 @@ export default function HowItWorks() {
           }}
           className="absolute top-12 md:top-10 text-center z-50"
         >
-          <span className="text-[#FF6A00] text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-3 block">
-            The Roadmap
-          </span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-500/20 bg-orange-500/5 text-orange-400 text-ms mb-8 ">
+          <span className="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_8px_#f97316]"></span>
+          How It Works
+        </div>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-white">
             How SCAMPUS Operates
           </h2>
