@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { CollageBuildings } from "./CollageBuildings";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,6 +19,14 @@ export default function Hero() {
     restDelta: 0.001
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const check = () => setIsMobile(window.innerWidth < 768);
+  check();
+  window.addEventListener("resize", check);
+  return () => window.removeEventListener("resize", check);
+}, []);
   // 1. Circle Animations
   const circleScale = useTransform(smoothProgress, [0, 0.7], [1, 25]);
   const circleOpacity = useTransform(smoothProgress, [0, 0.6, 0.8], [1, 1, 0]);
@@ -27,7 +36,11 @@ export default function Hero() {
   const textColor = useTransform(smoothProgress, [0, 0.5], ["#FFFFFF", "#FF6A00"]);
   const textY = useTransform(smoothProgress, [0, 0.8], ["0%", "0%"]); // Keep centered vertically
   const textScale = useTransform(smoothProgress, [0, 0.8], [0.9, 1]);
-  const scampusX = useTransform(smoothProgress, [0, 0.5], [-270, 0]);
+  const scampusX = useTransform(
+  smoothProgress,
+  [0, 0.5],
+  isMobile ? [0, 0] : [-270, 0]
+);
 
   // 3. Headline Appearance
   const headlineOpacity = useTransform(smoothProgress, [0.6, 0.8], [0, 1]);
@@ -41,8 +54,9 @@ export default function Hero() {
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         
         {/* COLLAGE BUILDINGS (Desktop only, before transition) */}
-        <motion.div style={{ opacity: collageOpacity }} className="absolute inset-0 z-20 pointer-events-none hidden md:block">
+        <motion.div style={{ opacity: collageOpacity }} className="absolute inset-0 z-20 pointer-events-none">
           <CollageBuildings />
+          
         </motion.div>
 
         {/* THE ROTATING PORTAL */}
@@ -71,16 +85,16 @@ export default function Hero() {
             {/* "Run Your Entire" */}
             <motion.span 
               style={{ opacity: headlineOpacity }}
-              className="text-white text-4xl md:text-7xl font-extrabold tracking-tight mb-2"
+              className="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight mb-2"
             >
               Run Your Entire
             </motion.span>
 
             {/* "Institution with SCAMPUS" - This row stays perfectly aligned */}
-            <div className="flex items-center justify-center gap-x-3 md:gap-x-5 whitespace-nowrap">
+            <div className="flex items-center justify-center gap-x-2 sm:gap-x-3 md:gap-x-5 whitespace-nowrap flex-wrap md:flex-nowrap">
               <motion.span 
                 style={{ opacity: headlineOpacity }}
-                className="text-white text-4xl md:text-7xl font-extrabold tracking-tight"
+                className="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight"
               >
                 Institution with
               </motion.span>
@@ -91,7 +105,7 @@ export default function Hero() {
                   scale: textScale,
                   x: scampusX,
                 }}
-                className="text-4xl md:text-7xl font-black uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(255,106,0,0.4)]"
+                className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(255,106,0,0.4)]"
               >
                 SCAMPUS
               </motion.span>
@@ -100,7 +114,7 @@ export default function Hero() {
             {/* "ERP Suite" */}
             <motion.span 
               style={{ opacity: headlineOpacity }}
-              className="text-white text-4xl md:text-7xl font-extrabold tracking-tight mt-2"
+              className="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight mt-2"
             >
               ERP Suite
             </motion.span>
