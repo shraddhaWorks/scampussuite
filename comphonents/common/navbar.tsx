@@ -9,6 +9,12 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const navLinks = [
+    { label: "Features", id: "campus-needs" },
+    { label: "How It Works", id: "working" },
+    { label: "Contact", id: "contact" }
+  ];
+
   // Trigger visibility after 100px of scroll
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
@@ -22,9 +28,9 @@ export default function Navbar() {
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
-      animate={{ 
-        y: isVisible ? 0 : -100, 
-        opacity: isVisible ? 1 : 0 
+      animate={{
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0
       }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex items-center justify-between bg-black/40 backdrop-blur-xl "
@@ -39,13 +45,13 @@ export default function Navbar() {
 
       {/* DESKTOP NAV LINKS */}
       <div className="hidden md:flex items-center gap-10">
-        {["Features", "How It Works", "Contact"].map((link) => (
+        {navLinks.map((link) => (
           <a
-            key={link}
-            href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+            key={link.id}
+            href={`#${link.id}`}
             className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
           >
-            {link}
+            {link.label}
           </a>
         ))}
       </div>
@@ -58,7 +64,7 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE MENU TOGGLE */}
-      <button 
+      <button
         className="md:hidden text-white p-2"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       >
@@ -72,14 +78,14 @@ export default function Navbar() {
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
         className="fixed inset-0 top-[72px] bg-black/95 backdrop-blur-2xl z-[-1] flex flex-col p-8 gap-8 md:hidden"
       >
-        {["Features", "How It Works", "Contact"].map((link) => (
+        {navLinks.map((link) => (
           <a
-            key={link}
-            href="#"
+            key={link.id}
+            href={`#${link.id}`}
             className="text-white text-sm font-bold pb-4"
             onClick={() => setMobileMenuOpen(false)}
           >
-            {link}
+            {link.label}
           </a>
         ))}
         <button className="w-full bg-[#FF6A00] text-white py-4 rounded-xl font-bold text-lg mt-4">
