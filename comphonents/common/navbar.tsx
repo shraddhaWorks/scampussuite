@@ -34,23 +34,40 @@ export default function Navbar() {
   });
 
   return (
-    <>
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{
-          y: isVisible ? 0 : -100,
-          opacity: isVisible ? 1 : 0
-        }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex items-center justify-between bg-black/40 backdrop-blur-xl "
-      >
-        {/* LOGO SECTION */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#FF6A00] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,106,0,0.3)]">
-            <span className="text-white font-black text-xl">S</span>
-          </div>
-          <span className="text-white font-bold tracking-tight text-xl">SCAMPUS</span>
-        </div>
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0
+      }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex items-center justify-between bg-black/40 backdrop-blur-xl "
+    >
+      {/* LOGO SECTION */}
+      <div className="flex items-center gap-3">
+        <div className="w-15 h-15 p-1 ">
+  <img 
+    src="https://shraddha.org.in/shraddha-logo-navbar.svg" 
+    alt="Shraddha Logo" 
+    style={{ width: '70px', height: '70px' }} // Fixed size inside the container
+    className="object-contain"
+  />
+</div>
+       
+      </div>
+
+      {/* DESKTOP NAV LINKS */}
+      <div className="hidden md:flex items-center gap-10">
+        {navLinks.map((link) => (
+          <a
+            key={link.id}
+            href={`#${link.id}`}
+            className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
 
         {/* DESKTOP NAV LINKS */}
         <div className="hidden md:flex items-center gap-10">
