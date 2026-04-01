@@ -64,7 +64,7 @@ const pillars = [
 
 const CampusNeeds = () => {
     return (
-        <div className="bg-black text-white min-h-screen selection:bg-orange-500/30 font-sans overflow-x-hidden">
+        <div className="bg-black text-white min-h-screen selection:bg-orange-500/30 font-sans overflow-x-hidden" id="campus-needs">
 
             {/* Hero Header Section */}
             <section className="py-24 px-6 text-center max-w-4xl mx-auto">

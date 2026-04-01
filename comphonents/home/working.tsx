@@ -46,7 +46,7 @@ export default function HowItWorks() {
   });
 
   return (
-    <div ref={containerRef} className="h-[400vh] bg-black">
+    <div ref={containerRef} className="h-[400vh] bg-black" id="working">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-6">
         
         {/* SECTION HEADER */}
