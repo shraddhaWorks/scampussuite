@@ -25,7 +25,7 @@ const FloatingNode = ({ children, className, delay = 0 }: { children: React.Reac
 
 export function CollageBuildings() {
   return (
-    <div className="absolute inset-0 z-20 pointer-events-none hidden md:block">
+    <div className="absolute inset-0 z-20 pointer-events-none">
       
       {/* Top Left - Library */}
       <FloatingNode className="absolute left-[10%] top-[18%]" delay={0}>
@@ -44,7 +44,7 @@ export function CollageBuildings() {
       </FloatingNode>
 
       {/* Center Right - Fees (Highlighted) */}
-      <FloatingNode className="absolute left-[78%] top-[55%]" delay={1.2}>
+      <FloatingNode className="absolute left-[78%] top-[60%] md:left-[78%] md:top-[55%]"  delay={1.2}>
         <div className="bg-[#181A20] rounded-xl shadow-[0_0_30px_rgba(255,106,0,0.2)] px-5 py-3 flex flex-col items-center border border-[#FF6A00]/50">
           <DollarSign className="text-[#FF6A00] w-6 h-6 mb-1" />
           <span className="text-[10px] uppercase tracking-wider text-[#FF6A00] font-bold">Fees</span>
@@ -53,7 +53,7 @@ export function CollageBuildings() {
       </FloatingNode>
 
       {/* Middle Left - Analytics */}
-      <FloatingNode className="absolute left-[15%] top-[48%]" delay={0.8}>
+      <FloatingNode className="absolute left-[5%] top-[70%] md:left-[15%] md:top-[48%]" delay={0.8}>
         <div className="bg-[#181A20]/80 backdrop-blur-md rounded-xl shadow-2xl px-4 py-3 flex flex-col items-center border border-white/5">
           <BarChart2 className="text-[#FF6A00] w-7 h-7 mb-1" />
           <div className="flex flex-col items-center">
@@ -66,7 +66,7 @@ export function CollageBuildings() {
       </FloatingNode>
 
       {/* Bottom Left - Hostel */}
-      <FloatingNode className="absolute left-[12%] bottom-[5%]" delay={1.5}>
+      <FloatingNode className="absolute right-[5%] bottom-[15%] md:right-[25%] md:bottom-[5%]" delay={1.5}>
         <div className="bg-[#181A20]/80 backdrop-blur-md rounded-xl shadow-2xl px-4 py-3 flex flex-col items-center border border-white/5">
           <Home className="text-[#FF6A00] w-7 h-7 mb-1" />
           <span className="text-[10px] uppercase tracking-wider text-white opacity-60">Parents</span>
