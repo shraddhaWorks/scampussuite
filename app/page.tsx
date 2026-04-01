@@ -6,6 +6,7 @@ import Clients from "@/comphonents/home/clients";
 import FAQ from "@/comphonents/home/faq";
 import FinalCTA from "@/comphonents/home/finalCTA";
 import HowItWorks from "@/comphonents/home/working";
+import Contact from "@/comphonents/home/contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
    <Clients />
    <FAQ />
    <FinalCTA />
+   <Contact />
    </>
   );
 }
