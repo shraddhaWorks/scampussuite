@@ -31,10 +31,15 @@ export default function Navbar() {
     >
       {/* LOGO SECTION */}
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-[#FF6A00] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,106,0,0.3)]">
-          <span className="text-white font-black text-xl">S</span>
-        </div>
-        <span className="text-white font-bold tracking-tight text-xl">SCAMPUS</span>
+        <div className="w-15 h-15 p-1 ">
+  <img 
+    src="https://shraddha.org.in/shraddha-logo-navbar.svg" 
+    alt="Shraddha Logo" 
+    style={{ width: '70px', height: '70px' }} // Fixed size inside the container
+    className="object-contain"
+  />
+</div>
+       
       </div>
 
       {/* DESKTOP NAV LINKS */}
