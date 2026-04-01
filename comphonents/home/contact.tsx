@@ -36,7 +36,7 @@ const Contact = () => {
             <div className="mb-10">
               <p className="text-orange-500 font-medium mb-2 text-sm">For faster response, please call us directly.</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Send us a Message</h2>
-              <p className="text-gray-500">Fill out the form below and we'll get back to you shortly.</p>
+              <p className="text-gray-500">Fill out the form below and we&apos;ll get back to you shortly.</p>
             </div>
 
             {submitted ? (

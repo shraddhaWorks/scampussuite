@@ -78,7 +78,7 @@ const Clients = () => {
             {/* Right Side: Larger Quote Text & Author details */}
             <div className="flex-1 space-y-10">
               <p className=" text-lg md:text-xl text-gray-200 leading-[1.3] font-medium tracking-tight">
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
 
               <div className="flex items-center gap-6">

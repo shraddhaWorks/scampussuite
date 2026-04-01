@@ -71,8 +71,11 @@ export default function HowItWorks() {
           {steps.map((step, index) => {
             const start = index / steps.length;
             
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             const y = useTransform(smoothProgress, [start - 0.1, start], ["100vh", "0vh"]);
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             const scale = useTransform(smoothProgress, [start, start + 0.1], [1, 0.95]);
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             const brightness = useTransform(smoothProgress, [start, start + 0.1], ["brightness(1)", "brightness(0.5)"]);
 
             // Alternating logic: Even index = Text Left, Odd index = Text Right

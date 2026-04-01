@@ -109,9 +109,12 @@ const FAQ = () => {
         <p className="text-gray-300 text-ms md:text-xl mb-8">
           Still have questions? Our team is here to help.
         </p>
-        <button className="bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-10 rounded-2xl transition-all duration-300 shadow-[0_10px_20px_rgba(234,88,12,0.3)] hover:shadow-[0_15px_25px_rgba(234,88,12,0.4)] hover:-translate-y-1 active:scale-95">
-          Contact Support
-        </button>
+        <a 
+  href="mailto:support@scampus.com" 
+  className="inline-block bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-10 rounded-2xl transition-all duration-300 shadow-[0_10px_20px_rgba(234,88,12,0.3)] hover:shadow-[0_15px_25px_rgba(234,88,12,0.4)] hover:-translate-y-1 active:scale-95 text-center"
+>
+  Contact Support
+</a>
       </div>
     </section>
   );

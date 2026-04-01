@@ -5,7 +5,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const footerLinks = {
-    Product: ['Features', 'Pricing', 'Security', 'Roadmap', 'Integrations'],
+    Product: ['Features', 'Working', 'Clients', 'FAQ', 'Contact'],
     Company: ['About', 'Blog', 'Careers', 'Press Kit', 'Partners'],
     Resources: ['Documentation', 'Help Center', 'Community', 'Webinars', 'API'],
     Legal: ['Privacy', 'Terms', 'Compliance', 'Cookies', 'Licenses']

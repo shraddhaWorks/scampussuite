@@ -1,7 +1,8 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, ArrowRight } from 'lucide-react';
+import ContactModal from '../common/ContactModal';
 
 const stats = [
   { value: "500+", label: "Trusted Institutions" },
@@ -10,19 +11,21 @@ const stats = [
 ];
 
 const FinalCTA = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="bg-black text-white py-32 px-6 relative overflow-hidden text-center">
-      
+
       {/* Background Grid/Glow Decor */}
-      <div className="absolute inset-0 z-0 opacity-20" 
-           style={{ backgroundImage: `radial-gradient(#f97316 0.5px, transparent 0.5px)`, strokeDasharray: '20 20', backgroundSize: '30px 30px' }}>
+      <div className="absolute inset-0 z-0 opacity-20"
+        style={{ backgroundImage: `radial-gradient(#f97316 0.5px, transparent 0.5px)`, strokeDasharray: '20 20', backgroundSize: '30px 30px' }}>
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-orange-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto relative z-10">
-        
+
         {/* Rocket Icon */}
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           className="inline-flex items-center justify-center w-18 h-18 rounded-2xl bg-orange-600 shadow-[0_0_30px_rgba(234,88,12,0.5)] mb-10"
@@ -31,7 +34,7 @@ const FinalCTA = () => {
         </motion.div>
 
         {/* Heading */}
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -42,7 +45,7 @@ const FinalCTA = () => {
         </motion.h2>
 
         {/* Subheading */}
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -52,26 +55,29 @@ const FinalCTA = () => {
         </motion.p>
 
         {/* Buttons */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24"
         >
-          <button className="group flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold py-6 px-8 rounded-2xl transition-all duration-300 shadow-[0_10px_25px_rgba(234,88,12,0.3)]">
+          <button onClick={() => setIsModalOpen(true)} type="button" className="group flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold py-6 px-8 rounded-2xl transition-all duration-300 shadow-[0_10px_25px_rgba(234,88,12,0.3)]">
             Book a Consultation
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>
-          
-          <button className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold py-6 px-10 rounded-2xl  transition-all duration-300">
+
+          <a
+            href="#campus-needs"
+            className="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold py-6 px-10 rounded-2xl transition-all duration-300 text-center active:scale-95 decoration-none"
+          >
             Explore Platform
-          </button>
+          </a>
         </motion.div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3  pt-4 ">
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,6 +95,10 @@ const FinalCTA = () => {
         </div>
 
       </div>
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
