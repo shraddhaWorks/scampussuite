@@ -3,17 +3,25 @@
 import React, { useState } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ContactModal from "./ContactModal";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // New State for the Popup
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navLinks = [
     { label: "Features", id: "campus-needs" },
     { label: "How It Works", id: "working" },
     { label: "Contact", id: "contact" }
   ];
+  // Helper to open modal and close mobile menu if it's open
+  const handleGetStarted = () => {
+    setIsModalOpen(true);
+    setMobileMenuOpen(false);
+  };
 
   // Trigger visibility after 100px of scroll
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -61,42 +69,61 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* DESKTOP ACTION BUTTON */}
-      <div className="hidden md:block">
-        <button className="bg-orange border border-orange-500/40 text-orange-400 hover:bg-orange-500 hover:text-white px-6 py-2.5 rounded-2xl  text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_5px_15px_rgba(255,106,0,0.2)]">
-          Get Started
-        </button>
-      </div>
+        {/* DESKTOP NAV LINKS */}
+        <div className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
 
-      {/* MOBILE MENU TOGGLE */}
-      <button
-        className="md:hidden text-white p-2"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-      >
-        {mobileMenuOpen ? <X /> : <Menu />}
-      </button>
+        {/* DESKTOP ACTION BUTTON */}
+        <div className="hidden md:block">
+          <button onClick={handleGetStarted} className="bg-orange border border-orange-500/40 text-orange-400 hover:bg-orange-500 hover:text-white px-6 py-2.5 rounded-2xl  text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_5px_15px_rgba(255,106,0,0.2)]">
+            Get Started
+          </button>
+        </div>
 
-      {/* MOBILE MENU OVERLAY */}
-      <motion.div
-        initial={false}
-        animate={{ x: mobileMenuOpen ? 0 : "100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="fixed inset-0 top-[72px] bg-black/95 backdrop-blur-2xl z-[-1] flex flex-col p-8 gap-8 md:hidden"
-      >
-        {navLinks.map((link) => (
-          <a
-            key={link.id}
-            href={`#${link.id}`}
-            className="text-white text-sm font-bold pb-4"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {link.label}
-          </a>
-        ))}
-        <button className="w-full bg-[#FF6A00] text-white py-4 rounded-xl font-bold text-lg mt-4">
-          Get Started
+        {/* MOBILE MENU TOGGLE */}
+        <button
+          className="md:hidden text-white p-2"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
         </button>
-      </motion.div>
-    </motion.nav>
+
+        {/* MOBILE MENU OVERLAY */}
+        <motion.div
+          initial={false}
+          animate={{ x: mobileMenuOpen ? 0 : "100%" }}
+          transition={{ type: "spring", damping: 25, stiffness: 200 }}
+          className="fixed inset-0 top-[72px] bg-black/95 backdrop-blur-2xl z-[-1] flex flex-col p-8 gap-8 md:hidden"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className="text-white text-sm font-bold pb-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          <button onClick={handleGetStarted} className="w-full bg-[#FF6A00] text-white py-4 rounded-xl font-bold text-lg mt-4">
+            Get Started
+          </button>
+        </motion.div>
+      </motion.nav>
+      {/* THE POPUP COMPONENT */}
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </>
   );
 }
