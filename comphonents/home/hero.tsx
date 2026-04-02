@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
@@ -36,15 +36,17 @@ export default function Hero() {
    * 2. THE TIMING: Fast & Focused
    * We finish the core transition within the first 30% of the scroll.
    */
-  
+
   // Circle zooms out extremely fast to clear the screen
   const circleScale = useTransform(smoothProgress, [0, 0.25], [1, 30]);
   const circleOpacity = useTransform(smoothProgress, [0, 0.2, 0.3], [1, 1, 0]);
-  
+
   // Text starts white and shifts to orange quickly
   const textColor = useTransform(smoothProgress, [0, 0.25], ["#FFFFFF", "#FF6A00"]);
   const textScale = useTransform(smoothProgress, [0, 0.3], [0.85, 1]);
-  
+
+  const poweredByOpacity = useTransform(smoothProgress, [0, 0.15], [1, 0]);
+
   // Horizontal movement (Scampus sliding into place)
   const scampusX = useTransform(
     smoothProgress,
@@ -62,7 +64,7 @@ export default function Hero() {
   return (
     <div ref={containerRef} className="h-[250vh] bg-black font-sans">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-        
+
         {/* COLLAGE BUILDINGS */}
         <motion.div style={{ opacity: collageOpacity }} className="absolute inset-0 z-20 pointer-events-none">
           <CollageBuildings />
@@ -73,7 +75,7 @@ export default function Hero() {
           style={{ scale: circleScale, opacity: circleOpacity }}
           className="absolute z-10 w-64 h-64 md:w-80 md:h-80 flex items-center justify-center"
         >
-          <motion.div 
+          <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
             className="absolute inset-0 border-2 border-dashed border-[#FF6A00] rounded-full opacity-60"
@@ -83,12 +85,12 @@ export default function Hero() {
 
         {/* MAIN UI LAYER */}
         <div className="relative z-20 w-full flex flex-col items-center">
-          
-          <motion.div 
+
+          <motion.div
             style={{ scale: headlineScale }}
             className="flex flex-col items-center justify-center text-center px-6"
           >
-            <motion.span 
+            <motion.span
               style={{ opacity: headlineOpacity }}
               className="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight mb-2"
             >
@@ -96,27 +98,40 @@ export default function Hero() {
             </motion.span>
 
             <div className="flex items-center justify-center gap-x-2 sm:gap-x-3 md:gap-x-5 whitespace-nowrap flex-wrap md:flex-nowrap">
-              <motion.span 
+              <motion.span
                 style={{ opacity: headlineOpacity }}
                 className="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight"
               >
                 Institution with
               </motion.span>
-              
-              <motion.span
-                style={{ 
-                  color: textColor,
-                  scale: textScale,
-                  x: scampusX,
-                }}
-                className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(255,106,0,0.4)]"
-              >
-                SCAMPUS
-    
-              </motion.span>
+
+              <div className="relative flex flex-col items-center">
+                <motion.span
+                  style={{
+                    color: textColor,
+                    scale: textScale,
+                    x: scampusX,
+                  }}
+                  className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter drop-shadow-[0_0_20px_rgba(255,106,0,0.4)] leading-none"
+                >
+                  SCAMPUS
+                </motion.span>
+
+                {/* POWERED BY TEXT - Absolute position so it doesn't push "ERP Suite" down */}
+                <motion.span
+                  style={{
+                    opacity: poweredByOpacity,
+                    x: scampusX,
+                    scale: textScale,
+                  }}
+                  className="absolute top-full mt-1 md:mt-2 text-white/50 text-[8px] md:text-[12px] font-bold tracking-[0.4em] uppercase whitespace-nowrap"
+                >
+                  Powered by Shraddha
+                </motion.span>
+              </div>
             </div>
 
-            <motion.span 
+            <motion.span
               style={{ opacity: headlineOpacity }}
               className="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight mt-2"
             >
@@ -125,7 +140,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-       
+
       </div>
     </div>
   );
