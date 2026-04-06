@@ -4,6 +4,7 @@ import "./globals.css";
 // Fixed spelling from "comphonents" to "components"
 import Navbar from "@/comphonents/common/navbar"; 
 import Footer from "@/comphonents/common/footer";
+import { FeatureProvider } from "@/context/FeatureContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +32,13 @@ export default function RootLayout({
           2. Place Navbar inside the body so it renders correctly.
       */}
       <body className={`${geistSans.className} ${geistMono.variable} min-h-full flex flex-col antialiased`}>
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <FeatureProvider>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </FeatureProvider>
       </body>
       
     </html>
