@@ -7,6 +7,7 @@ import FAQ from "@/comphonents/home/faq";
 import FinalCTA from "@/comphonents/home/finalCTA";
 import HowItWorks from "@/comphonents/home/working";
 import Contact from "@/comphonents/home/contact";
+import FeatureShowcaseClient from "@/comphonents/features/FeatureShowcaseClient";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
    <FAQ />
    <FinalCTA />
    <Contact />
+   <FeatureShowcaseClient />
    </>
   );
 }

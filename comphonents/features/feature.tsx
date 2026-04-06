@@ -1,42 +1,59 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, ArrowLeft, MoveRight, ChevronDown, Rocket } from 'lucide-react';
+import { CheckCircle2, ArrowLeft, MoveRight, ChevronDown, Rocket, Calendar, MessageSquare, GraduationCap, BarChart3, CreditCard, Building2, Users } from 'lucide-react';
 import ContactModal from '../common/ContactModal';
+import { PillarDataBase, SubFeature, ContentSection } from '../data/pillars';
+import { useFeatureContext } from '@/context/FeatureContext';
 
-export interface SubFeature {
-  title: string;
-  description: string;
-  benefits: string[];
-  image: string;
-  sections?: ContentSection[];
+// Export these for backward compatibility
+export type { SubFeature, ContentSection, PillarDataBase };
+
+// Helper function to get icon component by name
+function getIconByName(iconName: string) {
+  const icons: { [key: string]: React.ReactNode } = {
+    Users: <Users className="w-6 h-6 text-white" />,
+    MessageSquare: <MessageSquare className="w-6 h-6 text-white" />,
+    GraduationCap: <GraduationCap className="w-6 h-6 text-white" />,
+    BarChart3: <BarChart3 className="w-6 h-6 text-white" />,
+    CreditCard: <CreditCard className="w-6 h-6 text-white" />,
+    Building2: <Building2 className="w-6 h-6 text-white" />,
+    Calendar: <Calendar className="w-6 h-6 text-white" />,
+  };
+  return icons[iconName] || null;
 }
 
-export interface ContentSection {
-  title: string;
-  content: string;
-  image: string;
-}
-
-export interface PillarData {
-  letter: string;
-  tag: string;
-  title: string;
-  desc: string;
+// Extended type for display with icon
+export interface PillarData extends PillarDataBase {
   icon: React.ReactNode;
-  image: string;
-  subFeatures: SubFeature[];
 }
 
 interface FeatureShowcaseProps {
-  pillarData: PillarData;
-  onBack: () => void;
+  initialTab?: number;
 }
 
-const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ pillarData, onBack }) => {
-  const [activeTab, setActiveTab] = useState(0);
+const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ initialTab = 0 }) => {
+  const { selectedPillar, selectedIndex, closeFeature } = useFeatureContext();
+  const [activeTab, setActiveTab] = useState(selectedPillar ? selectedIndex : initialTab);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Memoize pillarData with icon
+  const pillarData = useMemo(() => {
+    if (!selectedPillar) return null;
+    return {
+      ...selectedPillar,
+      icon: getIconByName(selectedPillar.iconName)
+    } as PillarData;
+  }, [selectedPillar]);
+
+  useEffect(() => {
+    if (selectedPillar) {
+      setActiveTab(selectedIndex);
+    } else {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab, selectedPillar, selectedIndex]);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -50,6 +67,9 @@ const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ pillarData, onBack })
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  if (!pillarData) {
+    return null;
+  }
   const activeFeature = pillarData.subFeatures?.[activeTab] ?? null;
 
   return (
@@ -72,7 +92,7 @@ const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ pillarData, onBack })
           {/* HEADER */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
             <button 
-              onClick={onBack}
+              onClick={closeFeature}
               className="group flex items-center gap-2 text-gray-500 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
