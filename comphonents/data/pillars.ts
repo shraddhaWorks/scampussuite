@@ -172,11 +172,56 @@ export const pillars: PillarDataBase[] = [
         ]
       },
       {
-        title: 'Audit Management',
-        description: 'Two-way student and staff input channels for continuous improvement.',
-        benefits: ['Surveys', 'Action items', 'Engagement streams'],
-        image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80'
-      }
+  title: 'Audit Management',
+  description: 'A centralized performance evaluation system that enables Principals and HODs to assess faculty and department performance with transparency, accountability, and real-time score tracking.',
+  benefits: [
+    'Role-Based Audit System',
+    'Performance Tracking & Scoring',
+    'Real-Time Updates',
+    'Audit History & Transparency',
+    'Academic Year Analysis'
+  ],
+  image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80',
+
+ sections: [
+  {
+    title: 'Overview',
+    content: `The Audit Management System provides a structured platform to evaluate the performance of HODs and Faculty. It ensures transparency, accountability, and accurate performance tracking through a centralized and role-based system. The system is designed to digitize and streamline the entire audit process, eliminating manual record-keeping and reducing administrative overhead. By providing a unified interface for performance evaluation, it enables institutions to maintain consistency in assessments across departments. `,
+    image: 'https://img.freepik.com/free-vector/business-analysis-concept-illustration_114360-760.jpg'
+  },
+  {
+    title: 'Role-Based Access Control',
+    content: `The system follows strict role-based access where the Principal can audit both HODs and Faculty across departments, while HODs can audit only their department faculty. This ensures controlled access and prevents unauthorized evaluations. The role-based structure enforces a clear hierarchy within the institution, ensuring that responsibilities are properly assigned and maintained. It enhances data security by restricting sensitive operations to authorized users only, thereby minimizing the risk of data misuse or manipulation. Additionally, it simplifies system navigation by presenting users with only relevant data and actions based on their role, improving usability and reducing complexity in the audit process.`,
+    image: 'https://img.freepik.com/free-vector/security-concept-illustration_114360-271.jpg'
+  },
+  {
+    title: 'Structured Audit Workflow',
+    content: `Users can perform audits through a simple workflow: select department, choose role, pick a user, and perform actions like adding positive or negative records. All changes are saved instantly with automatic score updates. This structured workflow ensures that every audit follows a consistent process, reducing errors and improving reliability. The step-by-step approach guides users through each stage, making the system easy to use even for non-technical users. `,
+    image: 'https://img.freepik.com/free-vector/workflow-concept-illustration_114360-1334.jpg'
+  },
+  {
+    title: 'Performance Scoring System',
+    content: `Faculty performance is evaluated using both HOD and Principal scores, which are automatically combined for final evaluation. HODs are evaluated only by the Principal, ensuring a fair and hierarchical scoring system. The automated scoring mechanism eliminates manual calculations and reduces the chances of human error. It provides a clear and transparent view of performance by consolidating multiple evaluation inputs into a single comprehensive score. This approach ensures fairness and consistency in evaluations.`,
+    image: 'https://img.freepik.com/free-vector/performance-review-concept_23-2148669833.jpg'
+  },
+  {
+    title: 'Audit Actions & Records',
+    content: `Auditors can add positive (Good) or negative (Bad) records with categories, descriptions, and score adjustments. Each action directly impacts the user’s performance score and is recorded for future reference. These audit actions provide a structured way to capture both achievements and areas of concern, ensuring a balanced evaluation. The ability to categorize and describe each action adds clarity and context to the audit records. This detailed recording system helps administrators track performance trends over time and make informed decisions based on factual data. It also ensures that all evaluations are well-documented and easily accessible when needed.`,
+    image: 'https://img.freepik.com/free-vector/checklist-concept-illustration_114360-289.jpg'
+  },
+  {
+    title: 'Audit History & Transparency',
+    content: `The system maintains a complete history of all audit records including category, description, score changes, date, and the evaluator. This ensures full transparency and eliminates data confusion. The comprehensive audit trail allows administrators to review past records, verify actions, and ensure accountability at every level. It provides a clear timeline of performance evaluations, making it easier to track progress and identify patterns. `,
+    image: 'https://img.freepik.com/free-vector/data-report-concept_23-2148636496.jpg'
+  },
+  {
+    title: 'Academic Year Tracking',
+    content: `Performance data is tracked across academic years, allowing administrators to analyze trends, compare performance, and make informed decisions for institutional growth. This feature enables institutions to maintain historical records and evaluate long-term progress. By comparing performance across different academic years, administrators can identify consistent performers, detect areas of decline, and implement necessary improvements.`,
+    image: 'https://img.freepik.com/free-vector/analytics-concept-illustration_114360-851.jpg'
+  },
+  
+]
+}
     ]
   },
   {
@@ -422,73 +467,113 @@ export const pillars: PillarDataBase[] = [
     iconName: 'Building2',
     image: 'https://images.unsplash.com/photo-1731977188312-889e607b8c6a?w=500&auto=format&fit=crop&q=60',
     subFeatures: [
-      {
-        title: 'Hostel Room Booking',
-        description: 'Centralized reservations for rooms, labs and equipment.',
-        benefits: ['Booking calendar', 'Conflict checks', 'Usage fees'],
-        image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80'
-      },
+     {
+  title: 'Hostel Room Booking',
+  description: 'A smart accommodation management system that enables students to seamlessly book hostel rooms and cots with real-time availability, automated allocation, and secure payment processing.',
+  benefits: [
+    'Smart Hostel Allocation',
+    'Structured Booking Process',
+    'Real-Time Availability',
+    'Automated Room & Cot Allocation',
+    'Secure Payment & Confirmation'
+  ],
+  image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80',
+
+  sections: [
+    {
+      title: 'Overview',
+      content: 'The Hostel Booking System provides a structured and digital platform for managing student accommodation. It allows students to explore available hostels, select rooms and cots, and complete bookings seamlessly while ensuring accuracy, transparency, and improved user experience. By eliminating manual processes, the system reduces administrative workload and enhances operational efficiency. ',
+      image: 'https://img.freepik.com/free-vector/hostel-concept-illustration_114360-4973.jpg'
+    },
+    {
+      title: 'Smart Hostel Allocation',
+      content: 'The system automatically assigns students to the appropriate hostel based on gender and profile details. This intelligent allocation ensures that students are directed to the correct hostel category without manual intervention. It prevents incorrect bookings, improves operational accuracy, and ensures a smooth and controlled allocation process while maintaining institutional policies.',
+      image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
+    },
+    {
+      title: 'Seamless Booking Experience',
+      content: 'Students can book hostel rooms through a step-by-step process including selection of blocks, floors, room types, rooms, and cots. Only available options are shown at each step, ensuring a smooth and guided experience. This structured workflow reduces confusion, improves usability, and helps students make informed decisions quickly and efficiently.',
+      image: 'https://img.freepik.com/free-vector/booking-concept-illustration_114360-1705.jpg'
+    },
+    {
+      title: 'Flexible Accommodation Selection',
+      content: 'The system offers multiple room categories such as Normal, Deluxe, and Super Deluxe. Students can choose based on their comfort and budget, ensuring flexibility and personalized accommodation options. The organized structure of buildings, floors, rooms, and cots ensures clarity and easy navigation throughout the booking process.',
+      image: 'https://img.freepik.com/free-vector/home-choices-concept_23-2148650476.jpg'
+    },
+    {
+      title: 'Real-Time Availability',
+      content: 'Room and cot availability is updated in real time. Once a booking is made, it is instantly reflected across the system, preventing double bookings and ensuring accurate data visibility. This real-time synchronization improves transparency, avoids conflicts, and ensures that students always see the latest availability information.',
+      image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
+    },
+    {
+      title: 'Automated Room & Cot Allocation',
+      content: 'The system automatically assigns selected rooms and cots during booking. This reduces manual effort, avoids allocation conflicts, and ensures efficient utilization of hostel resources. Automation enhances speed, accuracy, and reliability, making the entire booking process seamless for both students and administrators.',
+      image: 'https://img.freepik.com/free-vector/automation-concept-illustration_114360-1620.jpg'
+    },
+    {
+      title: 'Secure Payment & Confirmation',
+      content: 'Students complete bookings through a secure payment system where hostel fees are predefined and managed by the administrator. Once payment is successful, the booking is confirmed instantly, and the selected room and cot are reserved. This ensures a safe, reliable, and seamless transaction experience for users.',
+      image: 'https://img.freepik.com/free-vector/online-payment-concept_23-2148674745.jpg'
+    },
+   
+  ]
+},
       {
         title: 'Bus Booking Management',
         description: 'Route management and live bus tracking for campus transit.',
         benefits: ['Pick-up alerts', 'ETA updates', 'Capacity planning'],
         image: 'https://images.unsplash.com/photo-1528256952176-78409138514e?auto=format&fit=crop&q=80'
       },
-      {
-        title: 'Library Management',
-        description: 'A centralized system to manage book issuance, returns, tracking, and automated fine calculation with real-time visibility.',
-        benefits: [
-          'Centralized Operations',
-          'Book Issuance & Returns',
-
-          'Automated Fine Calculation',
-          'Notifications & Alerts'
-        ],
-        image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80',
-
-        sections: [
-          {
-            title: 'Overview',
-            content: 'The Library Management System provides a structured platform to manage book issuance, returns, tracking, and fine management. It simplifies daily operations while ensuring accuracy, transparency, and easy access for both administrators and students.',
-            image: 'https://img.freepik.com/free-vector/library-concept-illustration_114360-1019.jpg'
-          },
-          {
-            title: 'Centralized Administration',
-            content: 'The system follows a role-based approach where the Principal assigns a Library Admin to manage all operations. The admin handles book issuance, returns, and fine tracking, while students have secure read-only access to their records.',
-            image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
-          },
-          {
-            title: 'Book Issuance & Return',
-            content: 'Books are issued and returned through a simple workflow where admins enter details like book name, author, issue date, and due date. Records are updated instantly and visible to students, ensuring accurate tracking.',
-            image: 'https://img.freepik.com/free-vector/book-management-concept_23-2148669904.jpg'
-          },
-          {
-            title: 'Automated Fine Calculation',
-            content: 'The system automatically calculates fines for overdue books. Fine starts after the due date, increases daily based on predefined values, and stops once the book is returned, ensuring accuracy and fairness.',
-            image: 'https://img.freepik.com/free-vector/calculator-concept_23-2148171762.jpg'
-          },
-          {
-            title: 'Student Self-Service Panel',
-            content: 'Students can view their book records including issued books, returned books, pending books, and fine details through a dedicated dashboard. This ensures transparency and keeps students informed.',
-            image: 'https://img.freepik.com/free-vector/student-dashboard-concept_23-2148657198.jpg'
-          },
-          {
-            title: 'Real-Time Tracking',
-            content: 'All library activities including book issuance, returns, and fine updates are tracked in real time. This ensures accurate records and transparency between administrators and students.',
-            image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
-          },
-          {
-            title: 'Notifications & Alerts',
-            content: 'Students receive automated notifications when due dates are reached, helping them return books on time and avoid fines, improving discipline and efficiency.',
-            image: 'https://img.freepik.com/free-vector/notification-concept_23-2148547867.jpg'
-          },
-          {
-            title: 'Reports & Insights',
-            content: 'The system provides detailed reports on book usage, returns, pending records, and fines. These insights help administrators monitor activity, improve decision-making, and optimize library operations.',
-            image: 'https://img.freepik.com/free-vector/data-report-concept_23-2148636496.jpg'
-          }
-        ]
-      },
+     {
+  title: 'Library Management',
+  description: 'A centralized system to manage book issuance, returns, tracking, and automated fine calculation with real-time visibility.',
+  benefits: [
+    'Centralized Operations',
+    'Book Issuance & Returns',
+    'Automated Fine Calculation',
+    'Notifications & Alerts'
+  ],
+  image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80',
+  
+  sections: [
+    {
+      title: 'Overview',
+      content: 'The Library Management System provides a structured platform to manage book issuance, returns, tracking, and fine management. It simplifies daily operations while ensuring accuracy, transparency, and easy access for both administrators and students. By digitizing manual processes, the system reduces administrative workload and improves efficiency. It also provides real-time visibility into library resources, helping institutions maintain better control over inventory and enhance the overall academic experience.',
+      image: 'https://img.freepik.com/free-vector/library-concept-illustration_114360-1019.jpg'
+    },
+    {
+      title: 'Centralized Administration',
+      content: 'The system follows a role-based approach where the Principal assigns a Library Admin to manage all operations. The admin handles book issuance, returns, fine tracking, and overall monitoring of library activities. This centralized control ensures accountability, reduces operational complexity, and improves coordination. Students are provided with secure read-only access to their records, ensuring transparency while maintaining data security.',
+      image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
+    },
+    {
+      title: 'Book Issuance & Return',
+      content: 'Books are issued and returned through a simple and structured workflow where admins enter details like book name, author, issue date, and due date. Once issued, records are updated instantly and made visible to students. When books are returned, the system automatically updates the return status and finalizes the transaction. This ensures accurate tracking, reduces errors, and maintains up-to-date records at all times.',
+      image: 'https://img.freepik.com/free-vector/book-management-concept_23-2148669904.jpg'
+    },
+    {
+      title: 'Automated Fine Calculation',
+      content: 'The system automatically calculates fines for overdue books using predefined rules. Fine calculation begins once the due date is crossed and increases daily until the book is returned. This automated mechanism eliminates manual errors, ensures fairness, and maintains consistency in fine management. It also reduces administrative effort while providing accurate and transparent fine tracking.',
+      image: 'https://img.freepik.com/free-vector/calculator-concept_23-2148171762.jpg'
+    },
+    {
+      title: 'Student Self-Service Panel',
+      content: 'Students can access a dedicated dashboard to view all their library records, including issued books, returned books, pending books, and fine details. They can also track their complete book history in one place. This self-service panel ensures transparency, improves user experience, and keeps students informed about their responsibilities without requiring admin intervention.',
+      image: 'https://img.freepik.com/free-vector/student-dashboard-concept_23-2148657198.jpg'
+    },
+    {
+      title: 'Real-Time Tracking',
+      content: 'All library activities including book issuance, returns, and fine updates are tracked in real time. Any action performed by the admin is instantly reflected across the system. This ensures accurate records, avoids duplication or confusion, and maintains transparency between administrators and students.',
+      image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
+    },
+    {
+      title: 'Notifications & Alerts',
+      content: 'Students receive automated notifications when due dates are approaching or exceeded. These alerts help them return books on time, avoid fines, and maintain discipline in library usage. Notifications improve communication between the system and users, ensuring timely actions and better engagement.',
+      image: 'https://img.freepik.com/free-vector/notification-concept_23-2148547867.jpg'
+    },
+   
+  ]
+},
     ]
   },
   {
