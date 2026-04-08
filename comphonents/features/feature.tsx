@@ -81,7 +81,7 @@ const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ initialTab = 0 }) => 
       className="fixed inset-0 z-[100] bg-black overflow-y-auto selection:bg-orange-500/30 scroll-smooth"
     >
       {/* BACKGROUND DECORATION */}
-      <span className="fixed z-0 text-[20rem] md:text-[30rem] font-black text-white/[0.02] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none hidden md:block">
+      <span className="fixed z-0 text-[20rem] md:text-[30rem] font-black text-white/[0.05] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none hidden md:block">
         {pillarData.letter}
       </span>
 
@@ -192,27 +192,69 @@ const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ initialTab = 0 }) => 
             </motion.div>
           </AnimatePresence>
 
-          {/* DETAILS SECTION */}
-          <div id="details-section" className="mt-32 space-y-32">
-            {activeFeature?.sections?.map((section, index) => (
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                key={index}
-                className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-16`}
-              >
-                <div className="flex-1 space-y-4">
-                  <h4 className="text-2xl font-bold text-white">{section.title}</h4>
-                  <p className="text-gray-400 text-base leading-relaxed">{section.content}</p>
-                </div>
-                <div className="flex-1 w-full">
-                  <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-                    <img src={section.image} alt={section.title} className="w-full h-full object-cover" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+        {/* DETAILS SECTION */}
+<div id="details-section" className="mt-32 space-y-32">
+  {activeFeature?.sections?.map((section, index) => {
+    const layoutType = index % 3;
+
+    return (
+      <motion.div 
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="w-full"
+      >
+
+        {/* 👉 IMAGE LEFT + TEXT RIGHT */}
+        {layoutType === 0 && (
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            
+            {/* Image */}
+            <div className="flex-1 w-full">
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <img src={section.image} alt={section.title} className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="flex-1 space-y-4">
+              <h4 className="text-2xl font-bold text-white">{section.title}</h4>
+              <p className="text-gray-400 text-base leading-relaxed">{section.content}</p>
+            </div>
           </div>
+        )}
+
+        {/* 👉 FULL WIDTH TEXT */}
+        {layoutType === 1 && (
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <h4 className="text-2xl font-bold text-white">{section.title}</h4>
+            <p className="text-gray-400 text-base leading-relaxed">{section.content}</p>
+          </div>
+        )}
+
+        {/* 👉 IMAGE RIGHT + TEXT LEFT */}
+        {layoutType === 2 && (
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            
+            {/* Text FIRST */}
+            <div className="flex-1 space-y-4">
+              <h4 className="text-2xl font-bold text-white">{section.title}</h4>
+              <p className="text-gray-400 text-base leading-relaxed">{section.content}</p>
+            </div>
+
+            {/* Image */}
+            <div className="flex-1 w-full">
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <img src={section.image} alt={section.title} className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        )}
+
+      </motion.div>
+    );
+  })}
+</div>
 
           {/* COMMON BANNER 1 */}
           <div className="rounded-[2rem] p-8 md:p-14 bg-gradient-to-br from-orange-600/20 to-orange-900/5 border border-orange-500/20 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden group mt-24">
