@@ -39,16 +39,65 @@ export const pillars: PillarDataBase[] = [
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
     subFeatures: [
       {
-        title: 'Add Users',
-        description: 'Paperless documentation and automated verification workflows for new admissions.',
-        benefits: ['Document OCR', 'Biometric Integration', 'Auto-ID Gen'],
-        image: 'https://images.unsplash.com/photo-1554224155-16974a4ea2c5?auto=format&fit=crop&q=80'
+        "title": "Add Users",
+        "description": "A centralized user management system that enables administrators to create, manage, and control access for users with role-based permissions, structured workflows, and secure monitoring.",
+        "benefits": [
+          "Role-Based Access Control",
+          "Centralized User Management",
+          "Permission Control",
+          "Secure Monitoring"
+        ],
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80",
+        "sections": [
+          {
+            "title": "Overview",
+            "content": "The User Management System in SCAMPUS provides a structured and secure platform for managing users across the institution. It allows administrators to create users, assign roles, and control access based on hierarchy. With clearly defined responsibilities for Principal and Heads of Department, the system ensures organized user handling and secure access to platform features.",
+            "image": "https://img.freepik.com/premium-vector/business-workflow-automation-concept_107173-4592.jpg"
+          },
+          {
+            "title": "User Creation Process",
+            "content": "Authorized users can create new accounts by navigating to the User Management module and accessing the Add User form. The process involves entering essential details such as role, name, email, username, password, and department. For faculty users, additional details like subjects, classes, qualification, and experience can be included. Once submitted, the user is created and added to the system instantly.",
+            "image": "https://img.freepik.com/free-vector/task-management-abstract-concept_335657-2125.jpg"
+          },
+          {
+            "title": "Role-Based Access & Permissions",
+            "content": "The system follows a strict role-based access control model where the Principal has full control over all users, while Heads of Department can manage faculty within their departments. Permissions can be assigned during user creation to allow or restrict access to specific features such as attendance, timetable, examinations, and reports. This ensures secure and controlled access across the platform.",
+            "image": "https://supertokens.com/covers/what-is-rbac-cover.png"
+          },
+          {
+            "title": "User Monitoring & System Behavior",
+            "content": "Administrators can view, edit, and manage users through a centralized dashboard with filtering and search options. The system maintains structured records including role, department, status, and activity details. Key behaviors include role-based visibility, permission-based feature access, and real-time updates to user data, ensuring efficient management, security, and transparency across the institution.",
+            "image": "https://img.freepik.com/free-vector/data-report-illustration-concept_114360-883.jpg"
+          }
+        ]
       },
       {
         title: 'Student Attendance',
-        description: 'Automated attendance tracking with exception alerts and analytics.',
-        benefits: ['Smart QR scans', 'Absent flags', 'Daily reports'],
-        image: 'https://images.unsplash.com/photo-1581091012184-3b90a0e468b4?auto=format&fit=crop&q=80'
+        description: 'A centralized attendance management system that enables institutions to record, manage, and track student attendance with controlled access, real-time updates, and structured monitoring.',
+        benefits: ['Centralized Tracking', 'Real-Time Monitoring', 'Role-Based Access', 'Accurate Reporting'],
+        image: 'https://images.unsplash.com/photo-1581091012184-3b90a0e468b4?auto=format&fit=crop&q=80',
+        sections: [
+          {
+            title: 'Overview',
+            content: 'The Attendance Management System in S Campus provides a structured approach to recording, managing, and monitoring student attendance across the institution. It ensures accuracy and discipline by allowing attendance to be marked based on specific academic parameters such as year, class, section, and period, while also supporting real-time updates and automated calculations to improve tracking and visibility.',
+            image: 'https://img.freepik.com/premium-vector/report-result-analyze-inspection-review-icon-paper-sheet-audit-sales-growth-graph-data-overview_101884-2320.jpg?semt=ais_incoming&w=740&q=80'
+          },
+          {
+            title: 'Role-Based Access',
+            content: 'Authorized users can record attendance by selecting key details such as year, class or section, period, and date, along with student status including present, absent, or late. The process involves accessing the Attendance module, applying the required filters, marking attendance for each student, and submitting the data, after which the records are stored in a structured format with real-time updates and options to view or export reports.',
+            image: 'https://supertokens.com/covers/what-is-rbac-cover.png'
+          },
+          {
+            title: 'Access Control and System Behavior',
+            content: 'The system operates on a role-based access model where teachers are responsible for marking attendance, Heads of Department can monitor attendance across classes, and students have view-only access to their individual attendance records. The system enforces strict rules such as allowing attendance only for the current day, restricting past and future entries, and locking records once submitted, ensuring secure, accurate, and well-controlled attendance management.',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRCMM8MENLpCKw1Q3jq3gUk5rXlWZKO2UPww&s'
+          },
+          {
+            title: '',
+            content: 'The Attendance Management System enhances institutional efficiency by introducing structure, accuracy, and real-time visibility into attendance processes. It minimizes manual errors, prevents data manipulation, and ensures accountability at every level. This results in a reliable attendance ecosystem where teachers manage records efficiently, administrators monitor performance, and students stay informed.',
+            image: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...'
+          }
+        ]
       },
       {
         title: 'Faculty Attendance',
@@ -57,16 +106,70 @@ export const pillars: PillarDataBase[] = [
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80'
       },
       {
-        title: 'Student Leaves',
-        description: 'Centralized employee records, scheduling and payroll snapshots.',
-        benefits: ['Shift planners', 'Leave requests', 'Contract reminders'],
-        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80'
+        "title": "Student Leaves",
+        "description": "A centralized leave management system that enables students to apply, track, and manage leave requests with real-time status updates, structured workflows, and role-based approvals.",
+        "benefits": [
+          "Structured Workflow",
+          "Role-Based Approvals",
+          "Real-Time Tracking",
+          "Centralized Monitoring"
+        ],
+        "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+        "sections": [
+          {
+            "title": "Overview",
+            "content": "The Student Leave Management System in SCAMPUS provides a structured and efficient platform for handling student leave requests across the institution. It allows students to apply for leave, ensures requests are routed to the appropriate teacher for approval, and maintains a complete record of all leave activities. The system enhances transparency and simplifies communication between students and teachers through a streamlined and organized workflow.",
+            "image": "https://img.freepik.com/premium-vector/business-workflow-automation-concept_107173-4592.jpg"
+          },
+          {
+            "title": "Leave Request Process",
+            "content": "Students can easily apply for leave through their dashboard by navigating to the Leave module and submitting a request with required details such as leave type, dates, and reason. The system automatically calculates the number of leave days and sets the request status to pending. Once submitted, the request is sent to the assigned teacher, who can review and either approve or reject it. Based on the action, the leave status is updated instantly and categorized accordingly.",
+            "image": "https://img.freepik.com/free-vector/task-management-abstract-concept_335657-2125.jpg"
+          },
+          {
+            "title": "Role-Based Access & Approval Flow",
+            "content": "The system follows a clear role-based approval structure where students initiate leave requests and teachers act as the approving authority. Teachers can view all requests in categorized sections such as pending, approved, and rejected, and take appropriate actions. The system ensures controlled access and accountability by recording approval details, including the authority responsible for each decision.",
+            "image": "https://supertokens.com/covers/what-is-rbac-cover.png"
+          },
+          {
+            "title": "Tracking, Summary & System Behavior",
+            "content": "Students can track all their leave requests in real time, including status, dates, and reasons. The system maintains a complete leave history and provides summary insights such as total leaves taken and pending requests. Key behaviors include automatic day calculation, real-time status updates, categorized tracking, and approval authority visibility. This ensures accuracy, transparency, and a well-organized leave management experience across the institution.",
+            "image": "https://img.freepik.com/free-vector/data-report-illustration-concept_114360-883.jpg"
+          }
+        ]
       },
       {
-        title: 'Faculty Leaves',
-        description: 'Two-way student and staff input channels for continuous improvement.',
-        benefits: ['Surveys', 'Action items', 'Engagement streams'],
-        image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80'
+        "title": "Faculty Leaves",
+        "description": "A centralized leave management system that enables faculty to apply for leave, track request status, and manage approvals through a structured and role-based workflow with real-time updates.",
+        "benefits": [
+          "Structured Workflow",
+          "Role-Based Approvals",
+          "Real-Time Tracking",
+          "Centralized Monitoring"
+        ],
+        "image": "https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80",
+        "sections": [
+          {
+            "title": "Overview",
+            "content": "The Faculty Leave Management System in SCAMPUS provides a structured platform for teachers to apply for leave and track their requests efficiently. It ensures that all leave applications are routed to the Head of Department for approval, maintaining a clear hierarchy and improving transparency in the leave process across the institution.",
+            "image": "https://img.freepik.com/premium-vector/business-workflow-automation-concept_107173-4592.jpg"
+          },
+          {
+            "title": "Leave Request Process",
+            "content": "Teachers can apply for leave through their dashboard by navigating to the Leave module and submitting a request with required details such as leave type, dates, and reason. The system automatically calculates the number of leave days and sets the request status to pending. Once submitted, the request is sent to the Head of Department, who reviews and either approves or rejects it, after which the status is updated instantly.",
+            "image": "https://img.freepik.com/free-vector/task-management-abstract-concept_335657-2125.jpg"
+          },
+          {
+            "title": "Role-Based Access & Approval Flow",
+            "content": "The system follows a clear role-based approval structure where teachers initiate leave requests and Heads of Department act as the approving authority. Each request goes through a controlled approval flow, ensuring accountability and proper access control. All requests are categorized into pending, approved, and rejected sections for better organization and monitoring.",
+            "image": "https://supertokens.com/covers/what-is-rbac-cover.png"
+          },
+          {
+            "title": "Tracking & System Behavior",
+            "content": "Teachers can track all their leave requests in real time, including status, dates, and reasons. The system maintains a complete leave history and clearly separates pending and processed requests. Key features include automatic day calculation, real-time status updates, and structured record management, ensuring a transparent, accurate, and efficient leave management experience.",
+            "image": "https://img.freepik.com/free-vector/data-report-illustration-concept_114360-883.jpg"
+          }
+        ]
       },
       {
   title: 'Audit Management',
@@ -481,7 +584,7 @@ export const pillars: PillarDataBase[] = [
       "Timetable Management",
       "Exam Scheduling",
       "Training & Placement Management"
-      
+
     ],
     iconName: 'Calendar',
     image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800',
