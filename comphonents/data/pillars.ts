@@ -69,11 +69,56 @@ export const pillars: PillarDataBase[] = [
         image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80'
       },
       {
-        title: 'Audit Management',
-        description: 'Two-way student and staff input channels for continuous improvement.',
-        benefits: ['Surveys', 'Action items', 'Engagement streams'],
-        image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80'
-      }
+  title: 'Audit Management',
+  description: 'A centralized performance evaluation system that enables Principals and HODs to assess faculty and department performance with transparency, accountability, and real-time score tracking.',
+  benefits: [
+    'Role-Based Audit System',
+    'Performance Tracking & Scoring',
+    'Real-Time Updates',
+    'Audit History & Transparency',
+    'Academic Year Analysis'
+  ],
+  image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&q=80',
+
+ sections: [
+  {
+    title: 'Overview',
+    content: `The Audit Management System provides a structured platform to evaluate the performance of HODs and Faculty. It ensures transparency, accountability, and accurate performance tracking through a centralized and role-based system. The system is designed to digitize and streamline the entire audit process, eliminating manual record-keeping and reducing administrative overhead. By providing a unified interface for performance evaluation, it enables institutions to maintain consistency in assessments across departments. `,
+    image: 'https://img.freepik.com/free-vector/business-analysis-concept-illustration_114360-760.jpg'
+  },
+  {
+    title: 'Role-Based Access Control',
+    content: `The system follows strict role-based access where the Principal can audit both HODs and Faculty across departments, while HODs can audit only their department faculty. This ensures controlled access and prevents unauthorized evaluations. The role-based structure enforces a clear hierarchy within the institution, ensuring that responsibilities are properly assigned and maintained. It enhances data security by restricting sensitive operations to authorized users only, thereby minimizing the risk of data misuse or manipulation. Additionally, it simplifies system navigation by presenting users with only relevant data and actions based on their role, improving usability and reducing complexity in the audit process.`,
+    image: 'https://img.freepik.com/free-vector/security-concept-illustration_114360-271.jpg'
+  },
+  {
+    title: 'Structured Audit Workflow',
+    content: `Users can perform audits through a simple workflow: select department, choose role, pick a user, and perform actions like adding positive or negative records. All changes are saved instantly with automatic score updates. This structured workflow ensures that every audit follows a consistent process, reducing errors and improving reliability. The step-by-step approach guides users through each stage, making the system easy to use even for non-technical users. `,
+    image: 'https://img.freepik.com/free-vector/workflow-concept-illustration_114360-1334.jpg'
+  },
+  {
+    title: 'Performance Scoring System',
+    content: `Faculty performance is evaluated using both HOD and Principal scores, which are automatically combined for final evaluation. HODs are evaluated only by the Principal, ensuring a fair and hierarchical scoring system. The automated scoring mechanism eliminates manual calculations and reduces the chances of human error. It provides a clear and transparent view of performance by consolidating multiple evaluation inputs into a single comprehensive score. This approach ensures fairness and consistency in evaluations.`,
+    image: 'https://img.freepik.com/free-vector/performance-review-concept_23-2148669833.jpg'
+  },
+  {
+    title: 'Audit Actions & Records',
+    content: `Auditors can add positive (Good) or negative (Bad) records with categories, descriptions, and score adjustments. Each action directly impacts the user’s performance score and is recorded for future reference. These audit actions provide a structured way to capture both achievements and areas of concern, ensuring a balanced evaluation. The ability to categorize and describe each action adds clarity and context to the audit records. This detailed recording system helps administrators track performance trends over time and make informed decisions based on factual data. It also ensures that all evaluations are well-documented and easily accessible when needed.`,
+    image: 'https://img.freepik.com/free-vector/checklist-concept-illustration_114360-289.jpg'
+  },
+  {
+    title: 'Audit History & Transparency',
+    content: `The system maintains a complete history of all audit records including category, description, score changes, date, and the evaluator. This ensures full transparency and eliminates data confusion. The comprehensive audit trail allows administrators to review past records, verify actions, and ensure accountability at every level. It provides a clear timeline of performance evaluations, making it easier to track progress and identify patterns. `,
+    image: 'https://img.freepik.com/free-vector/data-report-concept_23-2148636496.jpg'
+  },
+  {
+    title: 'Academic Year Tracking',
+    content: `Performance data is tracked across academic years, allowing administrators to analyze trends, compare performance, and make informed decisions for institutional growth. This feature enables institutions to maintain historical records and evaluate long-term progress. By comparing performance across different academic years, administrators can identify consistent performers, detect areas of decline, and implement necessary improvements.`,
+    image: 'https://img.freepik.com/free-vector/analytics-concept-illustration_114360-851.jpg'
+  },
+  
+]
+}
     ]
   },
   {
@@ -320,11 +365,60 @@ export const pillars: PillarDataBase[] = [
     image: 'https://images.unsplash.com/photo-1731977188312-889e607b8c6a?w=500&auto=format&fit=crop&q=60',
     subFeatures: [
       {
-        title: 'Hostel Room Booking',
-        description: 'Centralized reservations for rooms, labs and equipment.',
-        benefits: ['Booking calendar', 'Conflict checks', 'Usage fees'],
-        image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80'
-      },
+  title: 'Hostel Room Booking',
+  description: 'A smart accommodation management system that enables students to seamlessly book hostel rooms and cots with real-time availability, automated allocation, and secure payment processing.',
+  benefits: [
+    'Smart Hostel Allocation',
+    'Structured Booking Process',
+    'Real-Time Availability',
+    'Automated Room & Cot Allocation',
+    'Secure Payment & Confirmation'
+  ],
+  image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80',
+
+  sections: [
+    {
+      title: 'Overview',
+      content: 'The Hostel Booking System provides a structured and digital platform for managing student accommodation. It allows students to explore available hostels, select rooms and cots, and complete bookings seamlessly while ensuring accuracy, transparency, and improved user experience.',
+      image: 'https://img.freepik.com/free-vector/hostel-concept-illustration_114360-4973.jpg'
+    },
+    {
+      title: 'Smart Hostel Allocation',
+      content: 'The system automatically assigns students to the appropriate hostel based on gender and profile details. This ensures correct allocation, prevents booking errors, and simplifies the process without manual intervention.',
+      image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
+    },
+    {
+      title: 'Seamless Booking Experience',
+      content: 'Students can book hostel rooms through a step-by-step process including selection of blocks, floors, room types, rooms, and cots. Only available options are shown at each step, ensuring a smooth and guided experience.',
+      image: 'https://img.freepik.com/free-vector/booking-concept-illustration_114360-1705.jpg'
+    },
+    {
+      title: 'Flexible Accommodation Selection',
+      content: 'The system offers multiple room categories such as Normal, Deluxe, and Super Deluxe. Students can choose based on their comfort and budget, ensuring flexibility and personalized accommodation options.',
+      image: 'https://img.freepik.com/free-vector/home-choices-concept_23-2148650476.jpg'
+    },
+    {
+      title: 'Real-Time Availability',
+      content: 'Room and cot availability is updated in real time. Once a booking is made, it is instantly reflected across the system, preventing double bookings and ensuring accurate data visibility.',
+      image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
+    },
+    {
+      title: 'Automated Room & Cot Allocation',
+      content: 'The system automatically assigns selected rooms and cots during booking. This reduces manual effort, avoids conflicts, and ensures efficient utilization of hostel resources.',
+      image: 'https://img.freepik.com/free-vector/automation-concept-illustration_114360-1620.jpg'
+    },
+    {
+      title: 'Secure Payment & Confirmation',
+      content: 'Students complete bookings through a secure payment system. Once payment is successful, the booking is confirmed instantly, and the selected room and cot are reserved.',
+      image: 'https://img.freepik.com/free-vector/online-payment-concept_23-2148674745.jpg'
+    },
+    {
+      title: 'Digital Receipt & Record Management',
+      content: 'After booking, a digital receipt is generated with complete details of accommodation and payment. Students can view or download it anytime, ensuring transparency and proper record-keeping.',
+      image: 'https://img.freepik.com/free-vector/invoice-concept-illustration_114360-2153.jpg'
+    }
+  ]
+    },
       {
         title: 'Bus Booking Management',
         description: 'Route management and live bus tracking for campus transit.',
