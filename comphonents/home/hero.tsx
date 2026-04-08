@@ -61,6 +61,11 @@ export default function Hero() {
   // Collage fades out instantly to prevent visual clutter during the fast zoom
   const collageOpacity = useTransform(smoothProgress, [0, 0.15], [1, 0]);
 
+
+// Subtitle animation (appears after headline)
+const subTextOpacity = useTransform(smoothProgress, [0.3, 0.45], [0, 1]);
+const subTextY = useTransform(smoothProgress, [0.3, 0.45], [20, 0]);
+
   return (
     <div ref={containerRef} className="h-[250vh] bg-black font-sans">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
@@ -137,7 +142,21 @@ export default function Hero() {
             >
               ERP Suite
             </motion.span>
+
+            
           </motion.div>
+
+ <motion.p
+    style={{ 
+      opacity: subTextOpacity, 
+      y: subTextY 
+    }}
+    className="absolute top-[120%] md:top-[120%] text-sm sm:text-base md:text-lg text-white/60 font-medium tracking-wide text-center max-w-xl"
+  >
+    AI-Driven ERP Suite for Your College
+  </motion.p>
+
+          
         </div>
 
 
