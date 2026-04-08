@@ -88,10 +88,7 @@ const FeatureShowcase: React.FC<FeatureShowcaseProps> = ({ initialTab = 0 }) => 
     {pillarData.letter}
   </span>
 
- 
-  <span className="absolute inset-0 flex items-center justify-center text-[20rem] md:text-[30rem] font-black text-orange-400/10 blur-[120px] animate-pulse-slower">
-    {pillarData.letter}
-  </span>
+
 
   {/* Main Letter */}
   <span className="relative text-[20rem] md:text-[30rem] font-black text-white/[0.05]">

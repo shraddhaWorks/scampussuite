@@ -364,7 +364,7 @@ export const pillars: PillarDataBase[] = [
     iconName: 'Building2',
     image: 'https://images.unsplash.com/photo-1731977188312-889e607b8c6a?w=500&auto=format&fit=crop&q=60',
     subFeatures: [
-      {
+     {
   title: 'Hostel Room Booking',
   description: 'A smart accommodation management system that enables students to seamlessly book hostel rooms and cots with real-time availability, automated allocation, and secure payment processing.',
   benefits: [
@@ -379,107 +379,98 @@ export const pillars: PillarDataBase[] = [
   sections: [
     {
       title: 'Overview',
-      content: 'The Hostel Booking System provides a structured and digital platform for managing student accommodation. It allows students to explore available hostels, select rooms and cots, and complete bookings seamlessly while ensuring accuracy, transparency, and improved user experience.',
+      content: 'The Hostel Booking System provides a structured and digital platform for managing student accommodation. It allows students to explore available hostels, select rooms and cots, and complete bookings seamlessly while ensuring accuracy, transparency, and improved user experience. By eliminating manual processes, the system reduces administrative workload and enhances operational efficiency. ',
       image: 'https://img.freepik.com/free-vector/hostel-concept-illustration_114360-4973.jpg'
     },
     {
       title: 'Smart Hostel Allocation',
-      content: 'The system automatically assigns students to the appropriate hostel based on gender and profile details. This ensures correct allocation, prevents booking errors, and simplifies the process without manual intervention.',
+      content: 'The system automatically assigns students to the appropriate hostel based on gender and profile details. This intelligent allocation ensures that students are directed to the correct hostel category without manual intervention. It prevents incorrect bookings, improves operational accuracy, and ensures a smooth and controlled allocation process while maintaining institutional policies.',
       image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
     },
     {
       title: 'Seamless Booking Experience',
-      content: 'Students can book hostel rooms through a step-by-step process including selection of blocks, floors, room types, rooms, and cots. Only available options are shown at each step, ensuring a smooth and guided experience.',
+      content: 'Students can book hostel rooms through a step-by-step process including selection of blocks, floors, room types, rooms, and cots. Only available options are shown at each step, ensuring a smooth and guided experience. This structured workflow reduces confusion, improves usability, and helps students make informed decisions quickly and efficiently.',
       image: 'https://img.freepik.com/free-vector/booking-concept-illustration_114360-1705.jpg'
     },
     {
       title: 'Flexible Accommodation Selection',
-      content: 'The system offers multiple room categories such as Normal, Deluxe, and Super Deluxe. Students can choose based on their comfort and budget, ensuring flexibility and personalized accommodation options.',
+      content: 'The system offers multiple room categories such as Normal, Deluxe, and Super Deluxe. Students can choose based on their comfort and budget, ensuring flexibility and personalized accommodation options. The organized structure of buildings, floors, rooms, and cots ensures clarity and easy navigation throughout the booking process.',
       image: 'https://img.freepik.com/free-vector/home-choices-concept_23-2148650476.jpg'
     },
     {
       title: 'Real-Time Availability',
-      content: 'Room and cot availability is updated in real time. Once a booking is made, it is instantly reflected across the system, preventing double bookings and ensuring accurate data visibility.',
+      content: 'Room and cot availability is updated in real time. Once a booking is made, it is instantly reflected across the system, preventing double bookings and ensuring accurate data visibility. This real-time synchronization improves transparency, avoids conflicts, and ensures that students always see the latest availability information.',
       image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
     },
     {
       title: 'Automated Room & Cot Allocation',
-      content: 'The system automatically assigns selected rooms and cots during booking. This reduces manual effort, avoids conflicts, and ensures efficient utilization of hostel resources.',
+      content: 'The system automatically assigns selected rooms and cots during booking. This reduces manual effort, avoids allocation conflicts, and ensures efficient utilization of hostel resources. Automation enhances speed, accuracy, and reliability, making the entire booking process seamless for both students and administrators.',
       image: 'https://img.freepik.com/free-vector/automation-concept-illustration_114360-1620.jpg'
     },
     {
       title: 'Secure Payment & Confirmation',
-      content: 'Students complete bookings through a secure payment system. Once payment is successful, the booking is confirmed instantly, and the selected room and cot are reserved.',
+      content: 'Students complete bookings through a secure payment system where hostel fees are predefined and managed by the administrator. Once payment is successful, the booking is confirmed instantly, and the selected room and cot are reserved. This ensures a safe, reliable, and seamless transaction experience for users.',
       image: 'https://img.freepik.com/free-vector/online-payment-concept_23-2148674745.jpg'
     },
-    {
-      title: 'Digital Receipt & Record Management',
-      content: 'After booking, a digital receipt is generated with complete details of accommodation and payment. Students can view or download it anytime, ensuring transparency and proper record-keeping.',
-      image: 'https://img.freepik.com/free-vector/invoice-concept-illustration_114360-2153.jpg'
-    }
+   
   ]
-    },
+},
       {
         title: 'Bus Booking Management',
         description: 'Route management and live bus tracking for campus transit.',
         benefits: ['Pick-up alerts', 'ETA updates', 'Capacity planning'],
         image: 'https://images.unsplash.com/photo-1528256952176-78409138514e?auto=format&fit=crop&q=80'
       },
-      {
-      title: 'Library Management',
-      description: 'A centralized system to manage book issuance, returns, tracking, and automated fine calculation with real-time visibility.',
-      benefits: [
-        'Centralized Operations',
-        'Book Issuance & Returns',
-       
-        'Automated Fine Calculation',
-        'Notifications & Alerts'
-      ],
-      image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80',
-      
-      sections: [
-        {
-          title: 'Overview',
-          content: 'The Library Management System provides a structured platform to manage book issuance, returns, tracking, and fine management. It simplifies daily operations while ensuring accuracy, transparency, and easy access for both administrators and students.',
-          image: 'https://img.freepik.com/free-vector/library-concept-illustration_114360-1019.jpg'
-        },
-        {
-          title: 'Centralized Administration',
-          content: 'The system follows a role-based approach where the Principal assigns a Library Admin to manage all operations. The admin handles book issuance, returns, and fine tracking, while students have secure read-only access to their records.',
-          image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
-        },
-        {
-          title: 'Book Issuance & Return',
-          content: 'Books are issued and returned through a simple workflow where admins enter details like book name, author, issue date, and due date. Records are updated instantly and visible to students, ensuring accurate tracking.',
-          image: 'https://img.freepik.com/free-vector/book-management-concept_23-2148669904.jpg'
-        },
-        {
-          title: 'Automated Fine Calculation',
-          content: 'The system automatically calculates fines for overdue books. Fine starts after the due date, increases daily based on predefined values, and stops once the book is returned, ensuring accuracy and fairness.',
-          image: 'https://img.freepik.com/free-vector/calculator-concept_23-2148171762.jpg'
-        },
-        {
-          title: 'Student Self-Service Panel',
-          content: 'Students can view their book records including issued books, returned books, pending books, and fine details through a dedicated dashboard. This ensures transparency and keeps students informed.',
-          image: 'https://img.freepik.com/free-vector/student-dashboard-concept_23-2148657198.jpg'
-        },
-        {
-          title: 'Real-Time Tracking',
-          content: 'All library activities including book issuance, returns, and fine updates are tracked in real time. This ensures accurate records and transparency between administrators and students.',
-          image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
-        },
-        {
-          title: 'Notifications & Alerts',
-          content: 'Students receive automated notifications when due dates are reached, helping them return books on time and avoid fines, improving discipline and efficiency.',
-          image: 'https://img.freepik.com/free-vector/notification-concept_23-2148547867.jpg'
-        },
-        {
-          title: 'Reports & Insights',
-          content: 'The system provides detailed reports on book usage, returns, pending records, and fines. These insights help administrators monitor activity, improve decision-making, and optimize library operations.',
-          image: 'https://img.freepik.com/free-vector/data-report-concept_23-2148636496.jpg'
-        }
-      ]
+     {
+  title: 'Library Management',
+  description: 'A centralized system to manage book issuance, returns, tracking, and automated fine calculation with real-time visibility.',
+  benefits: [
+    'Centralized Operations',
+    'Book Issuance & Returns',
+    'Automated Fine Calculation',
+    'Notifications & Alerts'
+  ],
+  image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80',
+  
+  sections: [
+    {
+      title: 'Overview',
+      content: 'The Library Management System provides a structured platform to manage book issuance, returns, tracking, and fine management. It simplifies daily operations while ensuring accuracy, transparency, and easy access for both administrators and students. By digitizing manual processes, the system reduces administrative workload and improves efficiency. It also provides real-time visibility into library resources, helping institutions maintain better control over inventory and enhance the overall academic experience.',
+      image: 'https://img.freepik.com/free-vector/library-concept-illustration_114360-1019.jpg'
     },
+    {
+      title: 'Centralized Administration',
+      content: 'The system follows a role-based approach where the Principal assigns a Library Admin to manage all operations. The admin handles book issuance, returns, fine tracking, and overall monitoring of library activities. This centralized control ensures accountability, reduces operational complexity, and improves coordination. Students are provided with secure read-only access to their records, ensuring transparency while maintaining data security.',
+      image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
+    },
+    {
+      title: 'Book Issuance & Return',
+      content: 'Books are issued and returned through a simple and structured workflow where admins enter details like book name, author, issue date, and due date. Once issued, records are updated instantly and made visible to students. When books are returned, the system automatically updates the return status and finalizes the transaction. This ensures accurate tracking, reduces errors, and maintains up-to-date records at all times.',
+      image: 'https://img.freepik.com/free-vector/book-management-concept_23-2148669904.jpg'
+    },
+    {
+      title: 'Automated Fine Calculation',
+      content: 'The system automatically calculates fines for overdue books using predefined rules. Fine calculation begins once the due date is crossed and increases daily until the book is returned. This automated mechanism eliminates manual errors, ensures fairness, and maintains consistency in fine management. It also reduces administrative effort while providing accurate and transparent fine tracking.',
+      image: 'https://img.freepik.com/free-vector/calculator-concept_23-2148171762.jpg'
+    },
+    {
+      title: 'Student Self-Service Panel',
+      content: 'Students can access a dedicated dashboard to view all their library records, including issued books, returned books, pending books, and fine details. They can also track their complete book history in one place. This self-service panel ensures transparency, improves user experience, and keeps students informed about their responsibilities without requiring admin intervention.',
+      image: 'https://img.freepik.com/free-vector/student-dashboard-concept_23-2148657198.jpg'
+    },
+    {
+      title: 'Real-Time Tracking',
+      content: 'All library activities including book issuance, returns, and fine updates are tracked in real time. Any action performed by the admin is instantly reflected across the system. This ensures accurate records, avoids duplication or confusion, and maintains transparency between administrators and students.',
+      image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
+    },
+    {
+      title: 'Notifications & Alerts',
+      content: 'Students receive automated notifications when due dates are approaching or exceeded. These alerts help them return books on time, avoid fines, and maintain discipline in library usage. Notifications improve communication between the system and users, ensuring timely actions and better engagement.',
+      image: 'https://img.freepik.com/free-vector/notification-concept_23-2148547867.jpg'
+    },
+   
+  ]
+},
     ]
   },
   {
