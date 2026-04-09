@@ -33,7 +33,7 @@ export const pillars: PillarDataBase[] = [
       "Student Attendance",
       "Faculty Attendance",
       "Student Leaves",
-      "Faculty Leaves",
+      "Staff Leaves",
       "Audit Management",
     ],
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
