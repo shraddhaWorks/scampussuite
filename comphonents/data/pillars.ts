@@ -306,11 +306,56 @@ export const pillars: PillarDataBase[] = [
         ]
       },
       {
-        title: 'Chat & Messaging',
-        description: 'Dedicated portal for parent communications and student progress summaries.',
-        benefits: ['Live chat', 'Report cards', 'Alerts'],
-        image: 'https://images.unsplash.com/photo-1581091870627-c24e539dd3dc?auto=format&fit=crop&q=80'
-      },
+  title: 'Chat Request System',
+  description: 'A controlled communication system that enables parents to connect with faculty through a request-based approach, ensuring privacy, structured interaction, and faculty approval before initiating conversations.',
+  benefits: [
+    'Request-Based Communication',
+    'Role-Based Access Control',
+    'Secure & Controlled Messaging',
+    'Real-Time Request Status Tracking',
+    'Faculty Approval Workflow'
+  ],
+  image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80',
+
+  sections: [
+    {
+      title: 'Overview',
+      content: 'The Chat Request System in S Campus provides a structured and secure platform for communication between parents and faculty. Instead of direct messaging, the system follows a request-based approach where parents must first send a chat request. Faculty members have the authority to accept or reject these requests, ensuring controlled and meaningful interactions. This approach maintains privacy, reduces unnecessary interruptions, and improves communication efficiency within the institution.',
+      image: 'https://img.freepik.com/free-vector/online-communication-concept_23-2148501888.jpg'
+    },
+    {
+      title: 'Role-Based Access Control',
+      content: 'The system follows a strict role-based access model. Parents can send chat requests, view their request status, and communicate only after approval. Faculty members can receive incoming requests, review details such as topic and message, and decide whether to accept or reject them. This controlled access ensures data security, maintains discipline, and clearly defines responsibilities for each user role.',
+      image: 'https://img.freepik.com/free-vector/security-concept-illustration_114360-271.jpg'
+    },
+    {
+      title: 'Chat Request Creation',
+      content: 'Parents can initiate communication by creating a new chat request through a simple and guided process. They navigate to the chat section, select the faculty member, and enter details such as topic and message. Once submitted, the request is sent to the selected faculty and marked as pending. This structured process ensures clarity and prevents misuse of direct communication.',
+      image: 'https://img.freepik.com/free-vector/booking-concept-illustration_114360-1705.jpg'
+    },
+    {
+      title: 'Request Status Tracking',
+      content: 'Parents can track the status of their chat requests in real time. The system provides clear status indicators such as Pending, Approved, and Rejected. This transparency keeps users informed about the progress of their requests and eliminates confusion, ensuring a smooth communication experience.',
+      image: 'https://img.freepik.com/free-vector/real-time-sync-concept_23-2148699835.jpg'
+    },
+    {
+      title: 'Faculty Request Handling',
+      content: 'Faculty members receive incoming chat requests with complete details including parent name, topic, and message. They can review each request and take appropriate action by either accepting or rejecting it. This ensures that faculty have full control over their communication and can manage interactions efficiently without being overwhelmed.',
+      image: 'https://img.freepik.com/free-vector/teamwork-concept-illustration_114360-1802.jpg'
+    },
+    {
+      title: 'Communication Flow',
+      content: 'Once a request is approved, a secure chat channel is established between the parent and faculty, allowing both users to send and receive messages. If a request is rejected, communication is not initiated, and the parent must create a new request if needed. This controlled workflow ensures that all conversations are authorized and relevant.',
+      image: 'https://img.freepik.com/free-vector/chat-concept-illustration_114360-5522.jpg'
+    },
+    {
+      title: 'System Behavior & Control',
+      content: 'The system ensures that parents cannot directly message faculty without prior approval. All communication begins with a request, and only approved requests enable chat functionality. Faculty retain full control over accepting or rejecting requests, ensuring a disciplined and secure communication environment within the institution.',
+      image: 'https://img.freepik.com/free-vector/control-panel-concept_23-2148656266.jpg'
+    },
+   
+  ]
+},
       {
         title: 'Notification Module',
         description: 'High-priority alerts with acknowledgement and escalation workflows.',
@@ -324,11 +369,56 @@ export const pillars: PillarDataBase[] = [
         image: 'https://images.unsplash.com/photo-1590608897129-79efbb8cb3ff?auto=format&fit=crop&q=80'
       },
       {
-        title: 'Workshops & Events',
-        description: 'Description for Workshops & Events',
-        benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'],
-        image: 'https://images.unsplash.com/photo-1554224155-16974a4ea2c5?auto=format&fit=crop&q=80'
-      }
+  title: 'Workshops & Events',
+  description: 'A comprehensive event management system that enables Heads of Department to create, manage, and publish workshops and events with structured participation, real-time visibility, and certificate distribution.',
+  benefits: [
+    'Structured Event Creation',
+    'Role-Based Access Control',
+    'Event Publishing & Visibility',
+    'Controlled Participation',
+    'Certificate Generation & Distribution'
+  ],
+  image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80',
+
+  sections: [
+    {
+      title: 'Overview',
+      content: 'The Workshops and Events Management System in S Campus provides a centralized platform for planning, managing, and publishing academic and extracurricular events. It allows Heads of Department to create structured events with detailed configurations, while students and faculty can explore and enroll in available opportunities. The system ensures controlled participation, organized scheduling, and efficient management of event-related activities, improving engagement and overall institutional coordination.',
+      image: 'https://img.freepik.com/free-vector/event-management-concept_23-2148655043.jpg'
+    },
+    {
+      title: 'Role-Based Access Control',
+      content: 'The system follows a well-defined role-based structure. The Principal can monitor all events across departments and track participation, while Heads of Department have full control over event creation, publishing, and certificate management. Students and faculty can view events and enroll based on availability. This hierarchy ensures secure access, clear responsibilities, and efficient management of event workflows.',
+      image: 'https://img.freepik.com/free-vector/security-concept-illustration_114360-271.jpg'
+    },
+    {
+      title: 'Event Creation & Configuration',
+      content: 'Heads of Department can create events by entering detailed information such as event title, target audience, type, difficulty level, and description. Additional fields like prerequisites and instructions help provide clarity to participants. This structured configuration ensures that all events are well-defined, informative, and easy to understand.',
+      image: 'https://img.freepik.com/free-vector/form-concept-illustration_114360-4937.jpg'
+    },
+    {
+      title: 'Scheduling & Media Management',
+      content: 'The system allows precise scheduling of events by defining date, time, location, and mode (online or offline). Administrators can also set event fees and participant limits using the seat count feature. Additionally, high-quality images can be uploaded to enhance event visibility and presentation, making the event listings more engaging and informative.',
+      image: 'https://img.freepik.com/free-vector/schedule-concept-illustration_114360-1715.jpg'
+    },
+    {
+      title: 'Event Publishing & Visibility',
+      content: 'Once all event details are configured, Heads of Department can publish the event, making it visible to students and faculty. Published events are listed in the dashboard with key details such as title, date, and enrollment count. The Principal can view all events across departments, ensuring transparency and centralized monitoring.',
+      image: 'https://img.freepik.com/free-vector/online-events-concept_23-2148528115.jpg'
+    },
+    {
+      title: 'Participation & Enrollment',
+      content: 'Students and faculty can browse available events and enroll based on their eligibility and availability. Events can be restricted to specific classes or made open to all. Participation can also be controlled using maximum seat limits, ensuring organized and manageable event execution.',
+      image: 'https://img.freepik.com/free-vector/group-discussion-concept_23-2148655006.jpg'
+    },
+    {
+      title: 'Certificate Management',
+      content: 'The Certificate Hub enables Heads of Department to generate and assign certificates to participants. Administrators can upload certificate templates, customize text properties such as font, size, color, and alignment, and preview the final output before assigning certificates. This ensures professional and personalized certificate generation.',
+      image: 'https://img.freepik.com/free-vector/certificate-concept-illustration_114360-2153.jpg'
+    },
+    
+  ]
+}
     ]
   },
   {
@@ -338,7 +428,7 @@ export const pillars: PillarDataBase[] = [
     features: [
       "Class & Section Setup",
       "Assignments",
-      "Exams & Grading",
+      "Syllabus Management",
       "Marksheet Generation",
       "RollNumber Allocation"
     ],
@@ -358,7 +448,7 @@ export const pillars: PillarDataBase[] = [
         image: 'https://images.unsplash.com/photo-1559028012-4810c5f7f3a5?auto=format&fit=crop&q=80'
       },
       {
-        title: 'Exams & Grading',
+        title: 'Syllabus Management',
         description: 'Visualized classroom performance and equity checks.',
         benefits: ['Heatmaps', 'Intervention flags', 'Trend lines'],
         image: 'https://images.unsplash.com/photo-1581091012184-3b90a0e468b4?auto=format&fit=crop&q=80'
